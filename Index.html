@@ -1,11 +1,439 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site ABRASP</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ABRASP</title>
+  <meta name="description" content="Associação — cursos, formadores, notícias e atendimento." />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Iv1RJy3GJQ9EoYhQk5f3o5Q75o7p5v8E3m1WcG3yq2k6l8z8O8H2EXyo8hU6r3hWqF4m8W0i6z1gq6lqVdF2Ww==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="topo">
+  <!-- Navegação -->
+  <header class="header">
+    <div class="container nav">
+      <a class="logo" href="#topo" aria-label="Página inicial">
+        <span class="logo-mark">A</span><span>ABRASP</span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <button class="menu-toggle" aria-expanded="false" aria-controls="menu-lista">
+          <span class="sr-only">Abrir menu</span>
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul class="menu-lista" id="menu-lista">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#historia">Nossa História</a></li>
+          <li><a href="#cursos">Cursos</a></li>
+          <li><a href="#formadores">Formadores</a></li>
+          <li><a href="#contato">Fale Conosco</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HOME / SLIDER -->
+  <section id="home" class="hero" aria-label="Destaques">
+    <div class="slider" role="region" aria-roledescription="carrossel" aria-label="Galeria de fotos" aria-live="polite">
+      <div class="slides">
+        <div class="slide is-active" style="background-image:url('https://tse2.mm.bing.net/th/id/OIP.deVNjz4WhxaDthLaZgaCwgHaHa?rs=1&pid=ImgDetMain&o=7&rm=3');" role="group" aria-label="1 de 4"></div>
+        <div class="slide" style="background-image:url('https://guiadaalma-wp.s3.amazonaws.com/prd/b2c/wp-content/uploads/2019/10/terapia-holistica-funciona-sessao-reiki.jpg');" role="group" aria-label="2 de 4"></div>
+        <div class="slide" style="background-image:url('https://www.infoescola.com/wp-content/uploads/2008/09/fitoterapia-683172178.jpg');" role="group" aria-label="3 de 4"></div>
+        <div class="slide" style="background-image:url('https://www.ecoactivo.com/media/Screenshot_7-30.jpg');" role="group" aria-label="4 de 4"></div>
+        
+      </div>
+      <button class="slider-btn prev" aria-label="Slide anterior"><i class="fa-solid fa-chevron-left"></i></button>
+      <button class="slider-btn next" aria-label="Próximo slide"><i class="fa-solid fa-chevron-right"></i></button>
+      <div class="dots" aria-hidden="true"></div>
+    </div>
+
+    <!-- Cards de métricas -->
+    <div class="container metrics">
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fa-solid fa-users"></i></div>
+        <div class="metric-content">
+          <span class="metric-label">Associados no Brasil</span>
+          <span class="metric-value" data-target="854">0</span>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fa-solid fa-flag"></i></div>
+        <div class="metric-content">
+          <span class="metric-label">Estados com associados</span>
+          <span class="metric-value" data-target="13">0</span>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fa-solid fa-book-open"></i></div>
+        <div class="metric-content">
+          <span class="metric-label">Cursos ativos</span>
+          <span class="metric-value" data-target="5">0</span>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <div class="metric-content">
+          <span class="metric-label">Formadores certificados</span>
+          <span class="metric-value" data-target="78">0</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRINCIPAIS NOTÍCIAS -->
+  <section class="section" aria-labelledby="titulo-noticias">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="titulo-noticias">Principais notícias</h2>
+        <a class="link" href="#"><span>Ver todas</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="grid news-grid">
+        <article class="card">
+          <img src="https://picsum.photos/id/1067/800/500" alt="Lançamento de programa nacional de capacitação" />
+          <div class="card-body">
+            <h3>Associação lança programa nacional de capacitação</h3>
+            <p>Iniciativa visa ampliar a qualificação de associados em todo o país com trilhas de aprendizagem.</p>
+            <a href="#" class="btn-link">Ler mais</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/id/1050/800/500" alt="Parcerias com universidades para cursos EAD" />
+          <div class="card-body">
+            <h3>Parceria com universidades para cursos EAD</h3>
+            <p>Novos convênios ampliam oferta de cursos com certificação reconhecida.</p>
+            <a href="#" class="btn-link">Ler mais</a>
+          </div>
+        </article>
+        <article class="card">
+          <img src="https://picsum.photos/id/1049/800/500" alt="Encontro regional de formadores" />
+          <div class="card-body">
+            <h3>Encontro regional reúne formadores</h3>
+            <p>Evento promove troca de experiências e boas práticas pedagógicas.</p>
+            <a href="#" class="btn-link">Ler mais</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- NOSSA HISTÓRIA -->
+  <section id="historia" class="section alt" aria-labelledby="titulo-historia">
+    <div class="container two-col">
+      <div>
+        <h2 id="titulo-historia">Nossa História</h2>
+        <p>Fundada com o propósito de fortalecer a categoria, nossa associação atua na defesa de interesses, promoção de oportunidades e qualificação contínua de nossos associados.</p>
+        <p>Ao longo dos anos, consolidamos uma rede ativa em todo o Brasil, com projetos de impacto social, educacional e profissional.</p>
+      </div>
+      <div>
+        <figure class="image-figure">
+          <img src="https://picsum.photos/id/1035/900/600" alt="Registro histórico de evento da associação" />
+          <figcaption>Compromisso com desenvolvimento e representatividade.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS -->
+  <section id="cursos" class="section" aria-labelledby="titulo-cursos">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="titulo-cursos">Cursos</h2>
+        <a class="link" href="#"><span>Catálogo completo</span> <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+      <div class="grid courses-grid">
+        <article class="course-card">
+          <div class="course-badge">EAD</div>
+          <h3>Gestão Associativa</h3>
+          <p>Boas práticas de governança, compliance e captação de recursos.</p>
+          <div class="course-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i> 20h • <i class="fa-solid fa-signal" aria-hidden="true"></i> Intermediário</div>
+          <button class="btn" type="button">Inscrever-se</button>
+        </article>
+        <article class="course-card">
+          <div class="course-badge">Presencial</div>
+          <h3>Formação de Formadores</h3>
+          <p>Metodologias ativas, avaliação e facilitação de aprendizagem.</p>
+          <div class="course-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i> 16h • <i class="fa-solid fa-signal" aria-hidden="true"></i> Avançado</div>
+          <button class="btn" type="button">Inscrever-se</button>
+        </article>
+        <article class="course-card">
+          <div class="course-badge">Híbrido</div>
+          <h3>Comunicação &amp; Liderança</h3>
+          <p>Habilidades essenciais para atuação institucional e mobilização.</p>
+          <div class="course-meta"><i class="fa-regular fa-clock" aria-hidden="true"></i> 24h • <i class="fa-solid fa-signal" aria-hidden="true"></i> Básico</div>
+          <button class="btn" type="button">Inscrever-se</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORMADORES -->
+  <section id="formadores" class="section alt" aria-labelledby="titulo-formadores">
+    <div class="container">
+      <h2 id="titulo-formadores">Formadores</h2>
+      <div class="grid trainers-grid">
+        <article class="trainer-card">
+          <img src="https://picsum.photos/id/1005/400/400" alt="Formadora Ana Silva" />
+          <div>
+            <h3>Ana Silva</h3>
+            <p>Especialista em metodologias ativas e avaliação por competências.</p>
+            <div class="icons">
+              <a href="#" aria-label="LinkedIn de Ana Silva"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" aria-label="Lattes ou currículo de Ana Silva"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="trainer-card">
+          <img src="https://picsum.photos/id/1012/400/400" alt="Formador João Pereira" />
+          <div>
+            <h3>Ana Silva</h3>
+            <p>Especialista em metodologias ativas e avaliação por competências.</p>
+            <div class="icons">
+              <a href="#" aria-label="LinkedIn de Ana Silva"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" aria-label="Lattes ou currículo de Ana Silva"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="trainer-card">
+          <img src="https://picsum.photos/id/1012/400/400" alt="Formador João Pereira" />
+          <div>
+            <h3>Ana Silva</h3>
+            <p>Especialista em metodologias ativas e avaliação por competências.</p>
+            <div class="icons">
+              <a href="#" aria-label="LinkedIn de Ana Silva"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" aria-label="Lattes ou currículo de Ana Silva"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="trainer-card">
+          <img src="https://picsum.photos/id/1012/400/400" alt="Formador João Pereira" />
+          <div>
+            <h3>Ana Silva</h3>
+            <p>Especialista em metodologias ativas e avaliação por competências.</p>
+            <div class="icons">
+              <a href="#" aria-label="LinkedIn de Ana Silva"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" aria-label="Lattes ou currículo de Ana Silva"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="trainer-card">
+          <img src="https://picsum.photos/id/1012/400/400" alt="Formador João Pereira" />
+          <div>
+            <h3>João Pereira</h3>
+            <p>Gestão de projetos educacionais e desenho instrucional.</p>
+            <div class="icons">
+              <a href="#" aria-label="LinkedIn de João Pereira"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" aria-label="Lattes ou currículo de João Pereira"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+          </div>
+        </article>
+        <article class="trainer-card">
+          <img src="https://picsum.photos/id/1001/400/400" alt="Formadora Camila Rocha" />
+          <div>
+            <h3>Camila Rocha</h3>
+            <p>Comunicação institucional e facilitação de grupos.</p>
+            <div class="icons">
+              <a href="#" aria-label="LinkedIn de Camila Rocha"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" aria-label="Lattes ou currículo de Camila Rocha"><i class="fa-solid fa-graduation-cap"></i></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+<!-- TABELA DE FORMADORES -->
+
+<section id="tabela-formadores" class="section alt" aria-labelledby="titulo-tabela-formadores">
+  
+<style>
+    :root {
+      --bg: #0b0f17;
+      --card: #121826;
+      --muted: #9aa4b2;
+      --text: #e5e7eb;
+      --accent: #60a5fa;
+      --accent-2: #34d399;
+      --border: #1f2937;
+    }
+    body {
+      margin: 0; padding: 32px; background: var(--bg); color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+    }
+    .container {
+      max-width: 960px; margin: 0 auto; 
+    }
+    h1 { font-size: 1.5rem; margin: 0 0 12px; }
+    .sub { color: var(--muted); margin-bottom: 20px; }
+
+    .toolbar {
+      display: grid; gap: 12px; grid-template-columns: 1fr auto;
+      background: var(--card); border: 1px solid var(--border);
+      padding: 12px; border-radius: 14px; margin-bottom: 14px;
+    }
+    .search {
+      display: flex; align-items: center; gap: 8px; background: #0f1623;
+      border: 1px solid var(--border); border-radius: 10px; padding: 10px 12px;
+    }
+    .search input {
+      flex: 1; background: transparent; border: none; outline: none; color: var(--text);
+      font-size: 0.95rem;
+    }
+    .meta {
+      display: flex; align-items: center; gap: 10px; color: var(--muted);
+      font-size: 0.9rem;
+    }
+    .badge {
+      background: rgba(96,165,250,0.15);
+      color: var(--accent);
+      padding: 6px 10px; border-radius: 999px; border: 1px solid rgba(96,165,250,0.25);
+      font-weight: 600; font-size: 0.85rem;
+    }
+
+    .table-wrap {
+      overflow-x: auto; background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px;
+    }
+    table {
+      width: 100%; border-collapse: collapse; min-width: 560px;
+    }
+    thead th {
+      text-align: left; font-weight: 600; color: var(--muted);
+      font-size: 0.85rem; letter-spacing: 0.02em;
+      padding: 12px 14px; border-bottom: 1px solid var(--border);
+      background: #0f1623;
+      position: sticky; top: 0; z-index: 1;
+    }
+    tbody td {
+      padding: 12px 14px; border-bottom: 1px solid var(--border);
+    }
+    tbody tr:hover { background: rgba(96,165,250,0.06); }
+    .no-results {
+      text-align: center; color: var(--muted); padding: 18px;
+    }
+
+    /* Estados como “chip” opcional */
+    .chip {
+      display: inline-block; padding: 6px 10px; border-radius: 999px;
+      background: rgba(52,211,153,0.12); color: var(--accent-2);
+      border: 1px solid rgba(52,211,153,0.25); font-weight: 600; font-size: 0.82rem;
+    }
+  </style>
 </head>
 <body>
-    
+  <div class="container">
+    <h1>Tabela de Pessoas</h1>
+    <div class="sub">Busque pelo <strong>Nome</strong> (ignora acentos e maiúsculas/minúsculas).</div>
+
+    <div class="toolbar">
+      <label class="search" for="searchNome">
+        
+        <input id="searchNome" type="text" placeholder="Digite um nome para filtrar… (ex.: 'jo', 'maria', 'José')" />
+      </label>
+      <div class="meta">
+        <span class="badge" id="countBadge">0 resultados</span>
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table id="tabelaPessoas" aria-describedby="countBadge">
+        <thead>
+          <tr>
+            <th style="width: 45%;">Nome</th>
+            <th style="width: 35%;">Cidade</th>
+            <th style="width: 20%;">Estado</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Exemplo de dados (substitua/adicione os seus) -->
+          <tr><td>José da Silva</td><td>São Paulo</td><td><span class="chip">SP</span></td></tr>
+          <tr><td>Maria Oliveira</td><td>Rio de Janeiro</td><td><span class="chip">RJ</span></td></tr>
+          <tr><td>João Souza</td><td>Belo Horizonte</td><td><span class="chip">MG</span></td></tr>
+          <tr><td>Ana Beatriz</td><td>Curitiba</td><td><span class="chip">PR</span></td></tr>
+          <tr><td>Marcos Braga</td><td>Brasília</td><td><span class="chip">DF</span></td></tr>
+          <tr><td>Érica Mendes</td><td>Salvador</td><td><span class="chip">BA</span></td></tr>
+          <tr><td>Ângelo Pereira</td><td>Fortaleza</td><td><span class="chip">CE</span></td></tr>
+          <tr><td>Luís Fernando</td><td>Porto Alegre</td><td><span class="chip">RS</span></td></tr>
+          <tr><td>Camila Nóbrega</td><td>Recife</td><td><span class="chip">PE</span></td></tr>
+          <tr><td>René Costa</td><td>Florianópolis</td><td><span class="chip">SC</span></td></tr>
+        </tbody>
+        <tfoot>
+          <tr class="no-results" id="noResultsRow" style="display:none;">
+            <td colspan="3">Nenhum resultado encontrado.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+
+</section>
+
+
+  <!-- FALE CONOSCO -->
+  <section id="contato" class="section" aria-labelledby="titulo-contato">
+    <div class="container two-col">
+      <div>
+        <h2 id="titulo-contato">Fale Conosco</h2>
+        <p>Envie sua mensagem. Respondemos em até 2 dias úteis.</p>
+        <form class="form" id="contato-form" novalidate>
+          <div class="form-row">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" placeholder="Seu nome completo" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-row">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" placeholder="seuemail@exemplo.com" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-row">
+            <label for="telefone">Telefone</label>
+            <input id="telefone" name="telefone" type="tel" placeholder="(00) 00000-0000">
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-row">
+            <label for="assunto">Assunto</label>
+            <input id="assunto" name="assunto" type="text" placeholder="Assunto da mensagem" required>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <div class="form-row">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" rows="5" placeholder="Como podemos ajudar?" required></textarea>
+            <span class="error" aria-live="polite"></span>
+          </div>
+          <button type="submit" class="btn">Enviar</button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+      <div>
+        <div class="map-embed">
+          <iframe title="Mapa da sede" src="https://maps.google.com/maps?q=Brasil&t=&z=4&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+        </div>
+        <ul class="contact-list">
+          <li><i class="fa-solid fa-envelope" aria-hidden="true"></i> contato@suaassociacao.org.br</li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> (00) 0000-0000</li>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Endereço completo, Cidade - UF</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="ano"></span> Associação. Todos os direitos reservados.</p>
+      <div class="social">
+        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="#topo" class="to-top" aria-label="Voltar ao topo"><i class="fa-solid fa-arrow-up" aria-hidden="true"></i></a>
+
+  <script src="script.js"></script>
 </body>
 </html>
